@@ -1,0 +1,63 @@
+                                 ASSIGNMENT DAY 2 ....
+
+QUE.1  PROGRAM TO SEARCH FOR A PARTICULAR CHARACTER IN A STRING.
+
+CODE->
+      let name="tajmahal";
+      let ch='a';
+      for(let i=0;i<name.length;i++)
+      {
+       if(strings1[i]==ch)
+       {
+        console.log(i+1) ;              
+       }
+      }
+
+
+QUE.2  PROGRAM TO CONVERT MINUTES TO SECONDS.
+
+CODE-> 
+      let minutes=window.prompt("enter total minutes:");  
+      let sec;
+      sec=minutes*60;
+      console.log("total seconds"+sec);
+
+
+
+QUE.3 PROGRAM TO SEARCH FOR A ELEMENT IN A ARRAY OF STRINGS.
+
+CODE->
+      let fruits=["banana","apple","orange","mango","pineapple"];
+      let ele="apple";                                           
+      for(i=0;i<fruits.length;i++)
+      {
+        if(fruits[i]==ele)
+         {
+          console.log("element is found");
+          console.log("Its position is"+ (i+1));
+         }
+      }
+
+
+QUE .4 PROGRAM TO DISPLAY ONLY ELEMENTS CONTAINING 'a' IN THEM FROM A ARRAY.
+  
+CODE->
+       let characters=[9,2,8,'a','b','c'];
+       for(i=0;i<characters.length;i++)
+       {
+        if(characters[i]=='c')
+          {
+           console.log("element is present");
+          }
+        }
+           
+
+
+QUE.5 PRINT AN ARRAY IN REVERSE ORDER.
+
+CODE->
+       let name=["bharti","ram","mayur","sita","golu","palak"];
+       for(let i=name.length-1;i>=0;i--)
+       {
+        console.log(name[i]);
+       }
