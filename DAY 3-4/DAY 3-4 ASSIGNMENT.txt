@@ -1,0 +1,243 @@
+                             ****ASSIGNMENT DAY 3-4*****
+
+QUE.1 CREATE A WEBPAGE CONTAINING AN IMAGE AND THREE BUTTONS
+      A. on click of the second button a change the existing image to new image
+      B. on click of the third button change  it once again
+      C. on click of first, the first image should come back
+
+CODE--> 
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/07/25/852308-shraddhakapoor-061519.jpg"
+     id="image" 
+     width="200px"
+     />
+    <button onclick ="changeimage3()">first click</button>
+    <button onclick="changeimage1()">second click</button>
+    <button onclick="changeimage2()">third click</button>
+    <script>
+       function changeimage1()
+       {
+        const ele=document.getElementById("image");
+        const newUrl="https://medias.fashionnetwork.com/image/upload/c_limit,f_auto,h_963,q_auto:best,w_963/v1/medias/930ab4aeb490e553fd762325ee3874ea2947111.jpg"
+        ele.src=newUrl;
+       }
+      function changeimage2()
+      {
+       const ele=document.getElementById("image");
+       const newUrl="https://cdn.telanganatoday.com/wp-content/uploads/2018/06/disha-patani-new.jpg"
+       ele.src=newUrl
+      }
+      function changeimage3()
+      {
+       const ele=document.getElementById("image")
+       const newUrl="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/07/25/852308-shraddhakapoor-061519.jpg"
+       ele.src=newUrl
+      }     
+    </script>
+</body>
+</html>
+
+
+
+
+QUE.2 --CREATE A WEBPAGE CONTAINING TWO INPUT FIELD AND A BUTTON.
+     A. WRITE SOMETHING IN THE FIRST INPUT
+     B. ON CLICK OF THE BUTTON,THE CONTENT OF INPUT ONE SHOULD BE COPIED IN SECOND INPUT
+
+CODE-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login{
+            height:400px;
+            width:300px;
+            background-color: brown;
+        }
+        .input{
+            height:40px;
+            width:100px;
+            text-indent: 20px;
+            font.size:18px;
+        
+        }
+        .form.group{
+            padding.left:40px;
+            padding.right:40px;
+            padding.top:20;
+            padding.bottom:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form.group">
+        
+            <input type="text"  id="a" placeholder="enter name">
+            
+            <button onclick=copyname()>click</button>
+    
+            <input type="text"  id="b" placeholder="your name">  
+                
+        </div>
+    </div>
+    <script >function copyname(){
+        var a =document.getElementById("a")
+        a.type="text"
+        var b=document.getElementById("b")
+        b.value=a.value
+        
+        }
+   </script>
+</body>
+</html> 
+
+
+QUE.3 CREATE AN ARRAY OF OBJECTS HAVING THE FOLLOWING PROPERTIES
+     A.name(string),age(number),country(string),hobbies array(string[])
+     B.write a function to display all the object on console
+
+CODE->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let data=[
+    {
+        name:"prachi",
+        age: 20,
+        country:"india",
+        hobbies:["dancing","badminton"]
+    },
+    {
+        name:"rashmika",
+        age: 30,
+        country: "india",
+        hobbies:["acting","badminton"]
+        
+    },
+    {
+        name: "smandhana",
+        age:27,
+        country:"india",
+        hobbies:["cricket","basketball","dance"]
+    },
+        
+    {
+        name:"alexperry",
+        age:31,
+        country:"austrelia",
+        hobbies:["acting","dancing"]
+        
+    },
+    {
+        name:"evanka",
+        age:35,
+        country:"america",
+        hobbies:["singing","dancing","travelling"]
+        
+    }
+
+]
+   function display(n)
+   {
+    console.log(n)
+   }
+   display(data);
+
+    </script>
+ </body>
+</html>
+
+
+QUE.4-->FOOLOWING THE 3rd QUESTION
+      A. write a function to display all the object having age less than 30
+      B. write a function to display all the object having country india
+
+CODE->
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let data=[
+    {
+        name:"prachi",
+        age: 20,
+        country:"india",
+        hobbies:["dancing","badminton"]
+    },
+    {
+        name:"rashmika",
+        age: 30,
+        country: "india",
+        hobbies:["acting","badminton"]
+        
+    },
+    {
+        name: "smandhana",
+        age:27,
+        country:"india",
+        hobbies:["cricket","basketball","dance"]
+    },
+        
+    {
+        name:"alexperry",
+        age:31,
+        country:"austrelia",
+        hobbies:["cricket","acting","dancing"]
+        
+    },
+    {
+        name:"evanka",
+        age:35,
+        country:"america",
+        hobbies:["polity","singing","travelling"]
+        
+    }
+   ]
+
+
+    function display(n){
+       for(let i=0;i<n.length;i++)
+    {
+        if(n[i].age<30)
+        {
+            console.log(n[i])
+        }
+        if(n[i].country=="india")
+        {
+            console.log(n[i])
+        }
+    }
+
+}
+display(data);
+
+    </script>
+</body>
+</html>
